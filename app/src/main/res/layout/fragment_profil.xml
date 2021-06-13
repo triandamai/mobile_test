@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.pages.profil.ProfilFragment">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp16">
+        <ImageView
+            android:id="@+id/iv_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp16"
+            android:src="@drawable/ic_launcher_foreground"/>
+       <LinearLayout
+           android:id="@+id/ly_head_name"
+           android:layout_below="@+id/iv_profil"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="@dimen/dp16"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAlignment="center"
+               android:text="Gania Dilla"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAlignment="center"
+               android:text="Subtitle"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textAlignment="center"
+               android:text="Rating"/>
+       </LinearLayout>
+      <LinearLayout
+          android:layout_below="@+id/ly_head_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Test yang sudah selesai"
+              android:layout_marginVertical="@dimen/dp16"/>
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rv_list_test"
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:listitem="@layout/item_list_finished_test"/>
+      </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout >
+</layout>
